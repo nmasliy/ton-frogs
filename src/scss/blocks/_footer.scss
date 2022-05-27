@@ -1,4 +1,105 @@
 .footer {
 	margin-top: auto;
 	color: $white;
+	background-color: #1a1a1a;
+	padding-top: 60px;
+	padding-bottom: 40px;
+
+	@media screen and (max-width: 600px) {
+		padding-top: 122px;
+	}
+
+	p {
+		color: $white;
+	}
+
+	&__inner {
+		display: grid;
+		grid-auto-columns: 1fr;
+		grid-auto-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 15px;
+		grid-template-areas:
+			'navigation navigation navigation'
+			'info . socials'
+			'. policy .';
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: 1.5fr 0.6fr 0.9fr;
+			grid-template-areas:
+				'. navigation .'
+				'info navigation socials '
+				'policy  navigation .';
+		}
+		@media screen and (max-width: 600px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__navigation {
+		grid-area: navigation;
+		margin-bottom: 40px;
+		ul {
+			display: flex;
+			justify-content: center;
+			margin: -10px;
+			font-family: 'Mulish', sans-serif;
+			font-size: 16px;
+			li {
+				margin: 10px;
+			}
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+		}
+		@media screen and (min-width: $mobileBreakpoint) {
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__info {
+		grid-area: info;
+		font-size: 15px;
+		line-height: 1.3;
+		max-width: 225px;
+		@media screen and (max-width: 600px) {
+			max-width: 100%;
+			order: -1;
+			margin-bottom: 48px;
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__socials {
+		grid-area: socials;
+		@media screen and (max-width: 600px) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__policy {
+		grid-area: policy;
+		font-size: 15px;
+		line-height: 1.5;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.73);
+
+		@media screen and (max-width: 768px) {
+			text-align: left;
+		}
+		@media screen and (max-width: 600px) {
+			text-align: center;
+		}
+	}
 }
