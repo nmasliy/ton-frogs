@@ -18,7 +18,7 @@ $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 $offset_xxs_one_side: ($offset_xxs / 2);
 
-$fields: 15px;
+$fields: 30px;
 
 @mixin wrapper-full(){
 	padding-left: $fields;
@@ -36,7 +36,7 @@ $fields: 15px;
 }
 
 @mixin wrapper(){
-	max-width: 1140px;
+	max-width: 1260px;
 	margin: 0 auto;
 	@include wrapper-full();
 }

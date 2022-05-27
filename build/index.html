@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-        <link rel="stylesheet" href="css/libs.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Home</title>
-    </head>
-<body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&family=Mulish:wght@400;700;800;900&family=Roboto+Flex:opsz@8..144&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+
+<body class="black-bg">
 
 	<div class="page">
 		<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__col header__col--logo">
-                <a href="#" class="header__logo logo">Logo</a>
-            </div>
-            <div class="header__col header__col--desk">
-                <nav class="header__navigation navigation">
-                    <ul>
-                        <li><a href="#">Элемент 1</a></li>
-                        <li><a href="#">Элемент 2</a></li>
-                        <li class="active"><a href="#">Элемент 3</a></li>
-                        <li><a href="#">Элемент 4</a></li>
-                        <li><a href="#">Элемент 5</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header__col header__col--desk">
-                <a href="#" class="btn btn--default">Button</a>
-                <a href="#" class="btn btn--outline">Button</a>
-            </div>
-            <div class="header__burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- Отдельное меню на моб. устройствах -->
-            <div class="menu">
-                <div class="menu__close"><img src="img/close.svg" alt=""></div>
-                <nav class="menu__navigation navigation">
-                    <ul>
-                        <li><a href="#">Элемент 1</a></li>
-                        <li><a href="#">Элемент 2</a></li>
-                        <li class="active"><a href="#">Элемент 3</a></li>
-                        <li><a href="#">Элемент 4</a></li>
-                        <li><a href="#">Элемент 5</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="header__overlay"></div>
+	<div class="container">
+		<div class="header__inner">
+			<div class="header__col header__logo">
+				<a href="#" class="header__logo logo">Logo</a>
+			</div>
+			<div class="header__col menu">
+				<div class="menu__close"><img src="img/close.svg" alt=""></div>
+				<nav class="menu__navigation navigation">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">NFT Collections</a></li>
+						<li><a href="#">Merch</a></li>
+						<li><a href="#">Integrations</a></li>
+						<li><a href="#">Roadmap</a></li>
+						<li><a href="#">Team</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__col header__socials socials">
+				<ul>
+					<li><a href="#"><img src="img/telegram.svg" alt=""></a></li>
+					<li><a href="#"><img src="img/twitter.svg" alt=""></a></li>
+					<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+					<li><a href="#"><img src="img/tiktok.svg" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="header__col header__theme">
+				<button class="header__theme-btn"><img src="img/theme.svg" alt=""></button>
+			</div>
+			<div class="header__burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
 </header>
 
 		<!-- Main content -->
-		<div class="page__content">
-
+		<div class="page__content page__content--no-padding">
+			<div class="page__inner">
+				<section class="hero">
+					<div class="container">
+						<div class="hero__inner">
+							<div class="hero__video">
+								<video src="video/promo.mp4" autoplay muted loop></video>
+							</div>
+							<div class="hero__content">
+								<h1 class="hero__title h1">Welcome to <br><strong>TON Frogs</strong></h1>
+								<p>TON Frogs 3D NFT 5555 limited collection</p>
+								<div class="hero__buttons">
+									<a href="#" class="hero__btn btn btn--flex btn--big">
+										<svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.712 0C5.713 0 .04 5.83.04 12.893V13l2.384-.11c5.628-.26 10.133-4.806 10.391-10.485l.103-2.253A.211.211 0 0012.712 0zm12.763 13.015l-2.05.095c-5.63.26-10.134 4.806-10.392 10.485L12.923 26h.113c6.993 0 12.772-5.72 12.772-12.775a.214.214 0 00-.223-.214l-.11.004zM12.924 26l-.11-2.405c-.258-5.68-4.763-10.224-10.391-10.485L.039 13c.059 7.093 5.855 12.938 12.885 13z" fill="#fff"/><path d="M15.393 7.536l-.669 2.697c-.104.419-.155.628-.1.776.05.129.15.232.277.284.145.06.354.01.77-.087l2.899-.674c1.658-.386 2.487-.58 3.17-.998a4.974 4.974 0 001.52-1.457c.45-.666.683-1.492 1.151-3.143l.973-3.437c.137-.484.206-.725.143-.884a.498.498 0 00-.307-.29c-.16-.053-.395.032-.865.2l-3.937 1.42c-1.461.526-2.192.79-2.783 1.231a4.984 4.984 0 00-1.3 1.447c-.378.637-.566 1.397-.943 2.915z" fill="#fff"/></svg>
+										<span>GetGems</span>
+									</a>
+									<a href="#" class="hero__btn btn btn--flex btn--big">DISINTAR</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 		<!-- /Main content -->
 
@@ -75,4 +98,5 @@
 <script src="js/main.js"></script>
 
 </body>
+
 </html>

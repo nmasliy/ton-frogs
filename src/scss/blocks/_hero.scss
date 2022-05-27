@@ -1,1 +1,68 @@
-// hero
+.hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: calc(100vh - $headerSize );
+	padding: 30px 0;
+	margin-top: -70px;
+	color: $white;
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	p {
+		color: $white;
+	}
+
+	.container {
+		width: 100%;
+	}
+	
+	&__video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: url('../img/promo-bg.jpg') center / cover no-repeat;
+		video {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			min-width: 100%;
+			min-height: 100%;
+			object-fit: cover;
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($black, .15);
+			z-index: 3;
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 5;
+		p {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin: -12px;
+	}
+
+	&__btn {
+		margin: 12px;
+	}
+}

@@ -3,8 +3,8 @@ module.exports = {
 	outputStyle: 'scss',
 	offset: '30px',
 	container: {
-		maxWidth: '1140px',
-		fields: '15px',
+		maxWidth: '1260px',
+		fields: '30px',
 	},
 	breakPoints: {
 		md: {

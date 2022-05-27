@@ -4,8 +4,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		const $headerMenu = document.querySelector('.menu')
 		const $headerBtn = document.querySelector('.header__burger')
 		const $headerCloseBtn = document.querySelector('.menu__close')
-		const $headerOverlay = document.querySelector('.header__overlay')
-		const TRANSITION_DELAY = 500
 
 		let isInit = false
 
@@ -16,7 +14,9 @@ window.addEventListener('DOMContentLoaded', function () {
 				isInit = true
 				$headerBtn.addEventListener('click', openMenu)
 				$headerCloseBtn.addEventListener('click', closeMenu)
-				$headerOverlay.addEventListener('click', closeMenu)
+				$headerMenu.addEventListener('click', function(e) {
+					if (e.target.closest('.menu__navigation a')) closeMenu();
+				})
 			} else {
 				window.addEventListener('resize', checkScreenWidth)
 			}
@@ -25,25 +25,13 @@ window.addEventListener('DOMContentLoaded', function () {
 		checkScreenWidth()
 
 		function openMenu() {
-			$headerOverlay.style.display = 'block'
-			$headerMenu.style.display = 'block'
+			$headerMenu.classList.add('active')
 			$html.classList.add('overflow-hidden')
-
-			setTimeout(function () {
-				$headerOverlay.classList.add('active')
-				$headerMenu.classList.add('active')
-			}, 50)
 		}
 
 		function closeMenu() {
-			$headerOverlay.classList.remove('active')
 			$headerMenu.classList.remove('active')
 			$html.classList.remove('overflow-hidden')
-
-			setTimeout(function () {
-				$headerOverlay.style.display = ''
-				$headerMenu.style.display = ''
-			}, TRANSITION_DELAY)
 		}
 	}
 	initMenu()

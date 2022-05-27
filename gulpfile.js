@@ -28,7 +28,7 @@ function favicon() {
 }
 
 function files() {
-	return gulp.src('./src/files/**/*.*').pipe(gulp.dest('./build/files'))
+	return gulp.src('./src/video/**/*.*').pipe(gulp.dest('./build/video'))
 }
 
 function html() {
@@ -188,6 +188,7 @@ exports.watch = dev
 exports.images = images
 exports.grid = grid
 exports.html = html;
+exports.files = files
 exports.styles = styles
 exports.scriptsLibs = scriptsLibs;
 exports.stylesLibs = stylesLibs;
