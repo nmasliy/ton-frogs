@@ -64,6 +64,30 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+	function initSliders() {
+		const $partnersSlider = document.querySelector('.partners__slider')
+		const $partnersWrapper = $partnersSlider.querySelector('.partners__list')
+		const $partnersItems = $partnersSlider.querySelectorAll('.partners__item')
+		
+		if (window.innerWidth <= 700 && $partnersSlider) {
+			$partnersSlider.classList.add('swiper')
+			$partnersWrapper.classList.add('swiper-wrapper')
+
+			$partnersItems.forEach(item => {
+				item.classList.add('swiper-slide')
+			})
+			
+			const partnersSlider = new Swiper('.partners__slider', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				spaceBetween: 30
+			})
+		}
+	}
+
 	initMenu()
 	initTabs()
+	initSliders()
 })
