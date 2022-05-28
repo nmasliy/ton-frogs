@@ -81,6 +81,18 @@
 	}
 }
 
+.title {
+	font-family: 'Mulish', sans-serif;
+	font-weight: 900;
+	font-size: 48px;
+	span {
+		font-weight: 700;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 30px;
+	}
+}
+
 .page {
 	display: flex;
 	flex-direction: column;
@@ -138,17 +150,21 @@
 	@media screen and (max-width: $mobileBreakpoint) {
 		font-size: 15px;
 	}
+
 	&--flex {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		@media screen and (max-width: 600px) {
-			img, svg {
-				width: 17px;
-			}
-		}
 		span {
 			margin-left: 9px;
+		}
+	}
+
+	&--outline {
+		color: $black;
+		background-color: $white;
+		&::after {
+			opacity: 1;
 		}
 	}
 
@@ -166,22 +182,23 @@
 	}
 
 	@media screen and (min-width: $mobileBreakpoint) {
+		&:not(.btn--outline) {
+			&:hover {
+				color: $black;
+				background-color: $white;
+				&::after {
+					opacity: 1;
+				}
+				path {
+					fill: $black;
+				}
+			}
+		}
+	}
+	transition: 0.35s ease;
+	path,
+	&::after {
 		transition: 0.35s ease;
-		path,
-		&::after {
-			transition: 0.35s ease;
-		}
-
-		&:hover {
-			color: $black;
-			background-color: $white;
-			&::after {
-				opacity: 1;
-			}
-			path {
-				fill: $black;
-			}
-		}
 	}
 }
 // */Buttons
@@ -260,3 +277,49 @@
 	}
 }
 // */Navigation
+
+// *Tabs
+.tabs {
+	&__content {
+		@media screen and (max-width: $mobileBreakpoint) {
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		@media screen and (max-width: 768px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 42px;
+		margin: -15px;
+		@media screen and (max-width: $mobileBreakpoint) {
+			justify-content: center;
+		}
+		@media screen and (max-width: 600px) {
+			margin: -7px;
+		}
+	}
+	&__btn {
+		margin: 15px;
+		&.active {
+			color: $white;
+			background-color: transparent;
+			&::after {
+				opacity: 0;
+			}
+		}
+		@media screen and (max-width: $mobileBreakpoint) {
+			min-width: 144px;
+			padding: 17px 20px;
+		}
+		@media screen and (max-width: 600px) {
+			min-width: 122px;
+			width: calc(50% - 14px);
+			margin: 7px;
+		}
+	}
+}
+// */Tabs

@@ -14,8 +14,8 @@ window.addEventListener('DOMContentLoaded', function () {
 				isInit = true
 				$headerBtn.addEventListener('click', openMenu)
 				$headerCloseBtn.addEventListener('click', closeMenu)
-				$headerMenu.addEventListener('click', function(e) {
-					if (e.target.closest('.menu__navigation a')) closeMenu();
+				$headerMenu.addEventListener('click', function (e) {
+					if (e.target.closest('.menu__navigation a')) closeMenu()
 				})
 			} else {
 				window.addEventListener('resize', checkScreenWidth)
@@ -34,5 +34,36 @@ window.addEventListener('DOMContentLoaded', function () {
 			$html.classList.remove('overflow-hidden')
 		}
 	}
+	
+	function initTabs() {
+		const $tabs = document.querySelectorAll('[data-tab-title]')
+
+		if (document.querySelector('.tabs')) {
+			$tabs.forEach(tab => {
+				tab.addEventListener('click', function (e) {
+					e.preventDefault()
+
+					const activeTab = document.querySelector('[data-tab-title].active')
+					const activeContent = document.querySelector(
+						'[data-tab-content].active'
+					)
+					const id = tab.getAttribute('data-tab')
+
+					if (activeTab) {
+						activeTab.classList.remove('active')
+						activeContent.classList.remove('active')
+					}
+					const content = document.querySelector(
+						'[data-tab-content][data-tab="' + id + '"]'
+					)
+
+					tab.classList.add('active')
+					content.classList.add('active')
+				})
+			})
+		}
+	}
+
 	initMenu()
+	initTabs()
 })
