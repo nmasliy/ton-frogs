@@ -25,23 +25,7 @@
 		.partners__item.swiper-slide {
 			transform: none;
 		}
-		.swiper-pagination {
-			display: none;
-			position: static;
-			margin-top: 43px;
-			@media screen and (max-width: 700px) {
-				display: block;
-			}
-			.swiper-pagination-bullet {
-				width: 14px;
-				height: 14px;
-				opacity: 1;
-				background-color: rgba(0, 0, 0, 0.16);
-			}
-			.swiper-pagination-bullet-active {
-				background-color: $black;
-			}
-		}
+	
 	}
 
 	&__list {

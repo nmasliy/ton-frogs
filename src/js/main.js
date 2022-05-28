@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			$html.classList.remove('overflow-hidden')
 		}
 	}
-	
+
 	function initTabs() {
 		const $tabs = document.querySelectorAll('[data-tab-title]')
 
@@ -66,23 +66,46 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	function initSliders() {
 		const $partnersSlider = document.querySelector('.partners__slider')
-		const $partnersWrapper = $partnersSlider.querySelector('.partners__list')
-		const $partnersItems = $partnersSlider.querySelectorAll('.partners__item')
-		
+
 		if (window.innerWidth <= 700 && $partnersSlider) {
+			const $partnersWrapper = $partnersSlider.querySelector('.partners__list')
+			const $partnersItems = $partnersSlider.querySelectorAll('.partners__item')
+
 			$partnersSlider.classList.add('swiper')
 			$partnersWrapper.classList.add('swiper-wrapper')
 
 			$partnersItems.forEach(item => {
 				item.classList.add('swiper-slide')
 			})
-			
+
 			const partnersSlider = new Swiper('.partners__slider', {
 				pagination: {
 					el: '.swiper-pagination',
-					clickable: true
+					clickable: true,
 				},
-				spaceBetween: 30
+				spaceBetween: 30,
+			})
+		}
+
+		const $teamSlider = document.querySelector('.team__slider')
+
+		if (window.innerWidth <= 700 && $teamSlider) {
+			const $teamWrapper = $teamSlider.querySelector('.team__list')
+			const $teamItems = $teamSlider.querySelectorAll('.team__item')
+
+			$teamSlider.classList.add('swiper')
+			$teamWrapper.classList.add('swiper-wrapper')
+
+			$teamItems.forEach(item => {
+				item.classList.add('swiper-slide')
+			})
+
+			const teamSlider = new Swiper('.team__slider', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				spaceBetween: 30,
 			})
 		}
 	}
