@@ -160,14 +160,6 @@ function watch() {
 	gulp.watch('./src/scss/**/*.scss', styles)
 	gulp.watch('./src/**/*.html', html)
 	gulp.watch('./src/js/main.js', scripts)
-	gulp.watch('./smartgrid.js', grid)
-}
-
-function grid(done) {
-	delete require.cache[path.resolve('./smartgrid.js')]
-	let options = require('./smartgrid.js')
-	smartGrid('./src/scss/utilities', options)
-	done()
 }
 
 const build = gulp.parallel(
@@ -186,7 +178,6 @@ const dev = gulp.series(buildWithClean, watch)
 exports.build = buildWithClean
 exports.watch = dev
 exports.images = images
-exports.grid = grid
 exports.html = html;
 exports.files = files
 exports.styles = styles

@@ -49,6 +49,10 @@
 		}
 	}
 	&__theme {
+		margin-right: 0;
+		@media screen and (max-width: $mobileBreakpoint) {
+			margin-right: 30px;
+		}
 		@media screen and (max-width: 550px) {
 			margin-right: 60px;
 			margin-left: auto;
@@ -56,7 +60,7 @@
 	}
 	&__theme-btn {
 		display: flex;
-		transition: .35s ease-out;
+		transition: 0.35s ease-out;
 	}
 }
 
