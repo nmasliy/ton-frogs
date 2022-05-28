@@ -169,6 +169,7 @@
 		flex: 1 1 auto;
 		padding-top: calc($headerSize + 70px);
 		@media screen and (max-width: 600px) {
+			$headerSize: 95px; 
 			padding-top: calc($headerSize + 35px);
 		}
 	}
