@@ -2,6 +2,72 @@
 	.header__theme-btn {
 		transform: rotate(180deg);
 	}
+	color: $white;
+	background-color: $black;
+	p {
+		color: $white;
+	}
+	.about {
+		&__btn {
+			path {
+				fill: $white;
+			}
+			rect {
+				stroke: $white;
+			}
+		}
+		&__item {
+			background-color: $black;
+			color: $white;
+		}
+	}
+	.btn--outline {
+		background-color: $black;
+		color: $white;
+		box-shadow: none;
+	}
+	.partners {
+		&__btn {
+			color: $black;
+		}
+	}
+	.roadmap {
+		&__item {
+			path {
+				fill: $white;
+			}
+		}
+		&__year {
+			background-image: linear-gradient(
+				269.78deg,
+				rgba(63, 157, 219, 0.3) 1.3%,
+				rgba(96, 0, 219, 0.3) 95.76%
+			);
+		}
+	}
+	.team {
+		&__item {
+			&::before {
+				content: '';
+				position: absolute;
+				top: -3px;
+				bottom: -3px;
+				left: -3px;
+				right: -3px;
+				background: linear-gradient(269.78deg, #3f9ddb 1.3%, #6000db 95.76%);
+				z-index: -1;
+				border-radius: 18px;
+			}
+		}
+	}
+	.swiper-pagination {
+		.swiper-pagination-bullet {
+			background-color: rgba(255, 255, 255, 0.16);
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $white;
+		}
+	}
 }
 
 .container {

@@ -110,7 +110,17 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+	function initTheme() {
+		const $themeBtn = document.querySelector('.header__theme-btn')
+
+		$themeBtn.addEventListener('click', function() {
+			document.body.classList.toggle('black-theme')
+		})
+
+	}
+
 	initMenu()
 	initTabs()
 	initSliders()
+	initTheme()
 })
