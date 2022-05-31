@@ -125,6 +125,8 @@ function scriptsLibs() {
 }
 
 function images() {
+	// Clean images
+	// del('./src/img/optimized/*')
 	// Minify images
 	gulp
 		.src('./src/img/src/**/*')
