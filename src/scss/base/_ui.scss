@@ -7,6 +7,9 @@
 	p {
 		color: $white;
 	}
+	.roadmap__icon::after {
+		background-color: #000;
+	}
 	.about {
 		&__btn {
 			path {
