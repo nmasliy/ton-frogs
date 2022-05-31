@@ -107,22 +107,27 @@
 		&:first-child {
 			grid-area: big;
 			.about__item-content {
-				padding: 30px 50px 48px;
+				padding: 30px 50px 0;
 				@media screen and (max-width: $mobileBreakpoint) {
-					padding: 30px 40px 31px;
+					padding: 30px 40px 0;
 				}
 				@media screen and (max-width: 600px) {
-					padding: 20px 18px 54px;
+					padding: 20px 18px 54p0x;
 				}
 			}
-			img {
-				display: block;
-				margin: auto auto 0;
+			video {
+				position: relative;
+				top: 30px;
 			}
 			@media screen and (max-width: $mobileBreakpoint) {
 				max-width: 450px;
 				margin: 0 auto;
 				margin-bottom: 35px;
+			}
+			@media screen and (max-width: 600px) {
+				video {
+					top: 0;
+				}
 			}
 		}
 		&:nth-child(2) {
